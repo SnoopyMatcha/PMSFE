@@ -30,7 +30,7 @@ steps:
       - ssh-keyscan -p $GIT_PORT $GIT_HOST > $HOME/.ssh/known_hosts
       - git clone $DRONE_GIT_SSH_URL .
       - git submodule update --init --recursive --remote
-      - git switch develop
+      - git switch master
       - git pull
       - git status
 
