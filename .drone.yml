@@ -30,8 +30,8 @@ steps:
       - ssh-keyscan -p $GIT_PORT $GIT_HOST > $HOME/.ssh/known_hosts
       - git clone $DRONE_GIT_SSH_URL .
       - git submodule update --init --recursive --remote
-      - git switch master
       - git pull
+      - git switch master
       - git status
 
   - name: tag-docker-image
